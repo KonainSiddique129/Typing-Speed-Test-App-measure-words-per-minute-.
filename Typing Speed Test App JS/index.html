@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Typing Speed Test </h1>
+
+    <div class="controls">
+      <select id="durationSelect">
+        <option value="15">15 sec</option>
+        <option value="30">30 sec</option>
+        <option value="60" selected>60 sec</option>
+      </select>
+      <button id="startBtn">Start Test</button>
+      <button id="restartBtn">Restart</button>
+    </div>
+
+    <div class="card">
+      <p id="referenceText" class="reference">
+        Loading sample text...
+      </p>
+
+      <textarea id="typingArea" placeholder="When you start the test press Start Test or simply begin typing..." disabled></textarea>
+
+      <div class="status">
+        <div>Time: <strong id="timeDisplay">0</strong>s</div>
+        <div>WPM: <strong id="wpmDisplay">0</strong></div>
+        <div>Accuracy: <strong id="accuracyDisplay">0%</strong></div>
+        <div>Typed: <strong id="charsDisplay">0</strong> chars</div>
+      </div>
+
+      <div class="results hidden" id="results">
+        <h3>Results</h3>
+        <p><strong>Final WPM:</strong> <span id="finalWPM">0</span></p>
+        <p><strong>Accuracy:</strong> <span id="finalAcc">0%</span></p>
+        <p><strong>Chars Typed:</strong> <span id="finalChars">0</span></p>
+        <p><strong>Best WPM:</strong> <span id="bestWPM">0</span></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <small>Tip: WPM = (correct characters / 5) / minutes. Accuracy compares correct characters to all typed characters.</small>
+    </footer>
+  </div>
+
+  <script src="first.js"></script>
+</body>
+</html>
